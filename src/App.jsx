@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import teams from "./data/teams";
+import ProfileCard from "./components/ProfileCard";
 
 function App() {
+  // const getProfile = teams.map((team) => {
+  //   return <ProfileCard />;
+  // });
+
+  const getProfile = (team) =>(
+
+    <div>
+      <ProfileCard team={team} />
+    </div>
+  )
+
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {teams.map(getProfile)}
     </div>
   );
 }
