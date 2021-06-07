@@ -1,14 +1,23 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import styles from "./";
 
 const ProfileCard = (props) => {
   const { id, name, role } = props.team;
+  const [ticketCount, updateTicketCount] = useState(0)
+
+  const addTicket = () =>{
+    const newTicket = ticketCount + 1
+    updateTicketCount(newTicket)
+  }
 
   return (
     <div className="Card">
-      <h2>{name}text</h2>
-      <h1>{role}</h1>
-      <h2>{id}</h2>
+      <h2>Name: {name}</h2>
+      <h2>Role: {role}</h2>
+      {/* <h2>{id}</h2> */}
+      <h3>{ticketCount}</h3>
+      <button onClick={addTicket}>Add</button>
+      <button>Subtract</button>
     </div>
   );
 };
