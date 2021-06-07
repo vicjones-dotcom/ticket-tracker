@@ -20,6 +20,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Ticket Counter</h1>
       {teams.map(getProfile)}
     </div>
   );
