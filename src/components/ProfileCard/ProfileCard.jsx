@@ -3,12 +3,19 @@ import styles from "./";
 
 const ProfileCard = (props) => {
   const { id, name, role } = props.team;
-  const [ticketCount, updateTicketCount] = useState(0)
+  const [ticketCount, updateTicketCount] = useState(0);
 
-  const addTicket = () =>{
-    const newTicket = ticketCount + 1
-    updateTicketCount(newTicket)
-  }
+  const addTicket = () => {
+    const newTicket = ticketCount + 1;
+    updateTicketCount(newTicket);
+  };
+  const subtractTicket = () => {
+    const takeAwayTicket = ticketCount - 1;
+    updateTicketCount(takeAwayTicket);
+    if (ticketCount < 0) {
+      alert("You cannot subtract!");
+    }
+  };
 
   return (
     <div className="Card">
@@ -17,7 +24,7 @@ const ProfileCard = (props) => {
       {/* <h2>{id}</h2> */}
       <h3>{ticketCount}</h3>
       <button onClick={addTicket}>Add</button>
-      <button>Subtract</button>
+      <button onClick={subtractTicket}>Subtract</button>
     </div>
   );
 };
