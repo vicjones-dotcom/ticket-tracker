@@ -1,7 +1,16 @@
 .App {
+  /* text-align: center; */
+  /* display: flex; */
+}
+
+.ticketTitle{
   text-align: center;
-  display: flex;
-  /* padding-top: 50%; */
+}
+
+.CardTicketTable{
+ display: flex;
+ flex-direction: row;
+
 }
 
 .App-logo {

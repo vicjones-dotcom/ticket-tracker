@@ -18,8 +18,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Ticket Counter</h1>
-      <div>
+      <h1 className="ticketTitle">Ticket Counter</h1>
+      <div className="CardTicketTable">
       {teams.map(getProfile)}
       </div>
     </div>
