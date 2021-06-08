@@ -3,14 +3,15 @@
   /* display: flex; */
 }
 
-.ticketTitle{
+.ticketTitle {
   text-align: center;
 }
 
-.CardTicketTable{
- display: flex;
- flex-direction: row;
-
+.CardTicketTable {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
 }
 
 .App-logo {

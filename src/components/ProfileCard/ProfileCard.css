@@ -1,6 +1,15 @@
-.Card{
-    border: 1px solid black;
-    width: 300px;
-    height: 300px;
-    text-align: center;
+.Card {
+  border: 1px solid black;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  background: #a2a8d3;
+  color: black;
+}
+.card-button {
+  border-radius: 10px;
+  padding: 10px 10px;
+  margin-left: 10px;
+  background: #5d607a;
+  color: #fff;
 }

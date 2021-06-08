@@ -23,8 +23,12 @@ const ProfileCard = (props) => {
       <h2>Role: {role}</h2>
       {/* <h2>{id}</h2> */}
       <h3>{ticketCount}</h3>
-      <button onClick={addTicket}>Add</button>
-      <button onClick={subtractTicket}>Subtract</button>
+      <button className="card-button" onClick={addTicket}>
+        Add
+      </button>
+      <button className="card-button" onClick={subtractTicket}>
+        Subtract
+      </button>
     </div>
   );
 };
