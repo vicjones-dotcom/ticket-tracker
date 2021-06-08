@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import styles from "./";
+import "./ProfileCard.css";
 
 const ProfileCard = (props) => {
   const { id, name, role } = props.team;
@@ -12,7 +12,7 @@ const ProfileCard = (props) => {
   const subtractTicket = () => {
     const takeAwayTicket = ticketCount - 1;
     updateTicketCount(takeAwayTicket);
-    if (ticketCount < 0) {
+    if (ticketCount <= 0) {
       alert("You cannot subtract!");
     }
   };

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import teams from "./data/teams";
+
 import ProfileCard from "./components/ProfileCard";
 
 function App() {
@@ -10,13 +11,10 @@ function App() {
   // });
 
   const getProfile = (team) =>(
-
     <div>
-      <ProfileCard team={team} />
+      <ProfileCard  key={team.id} team={team} />
     </div>
   )
-
-  
 
   return (
     <div className="App">
